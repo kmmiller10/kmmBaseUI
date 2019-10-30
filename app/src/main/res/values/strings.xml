@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KMM BaseUI</string>
+    <string name="dailies">Dailies</string>
+    <string name="weeklies">Weeklies</string>
+</resources>
