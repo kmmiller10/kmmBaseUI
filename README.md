@@ -1,2 +1,2 @@
-# kmmBaseUI
-Base UI and libraries that I use in my apps
+# KMM Base UI & Library Component
+Base activity, fragments, bottom bar navigation, and other common components and libraries that I use as a base for my apps
