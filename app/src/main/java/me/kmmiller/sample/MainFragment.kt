@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.kmmiller.baseui.BaseFragment
+import me.kmmiller.baseui.KmmBaseFragment
 import me.kmmiller.sample.databinding.ActivityMainBinding
 
-class MainFragment : BaseFragment() {
+class MainFragment : KmmBaseFragment() {
     private lateinit var binding: ActivityMainBinding
 
     override fun getTitle(): String = getString(R.string.home)

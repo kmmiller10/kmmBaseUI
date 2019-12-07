@@ -1,10 +1,10 @@
 package me.kmmiller.baseui.views
 
-import me.kmmiller.baseui.BaseActivity
+import me.kmmiller.baseui.KmmBaseActivity
 import me.kmmiller.baseui.interfaces.ICancel
 
 
-class Progress(private val activity: BaseActivity) {
+class Progress(private val activity: KmmBaseActivity) {
     private var progressBar: BaseProgress? = null
 
     fun progress(message: String) {

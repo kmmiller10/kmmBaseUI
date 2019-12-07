@@ -9,7 +9,7 @@ import me.kmmiller.baseui.views.Progress
 
 import java.lang.Exception
 
-abstract class BaseFragment : Fragment(), ICancel {
+abstract class KmmBaseFragment : Fragment(), ICancel {
     private lateinit var progress: Progress
 
     abstract fun getTitle(): String
@@ -18,7 +18,7 @@ abstract class BaseFragment : Fragment(), ICancel {
         super.onViewCreated(view, savedInstanceState)
 
         activity?.let {
-            progress = Progress(it as BaseActivity)
+            progress = Progress(it as KmmBaseActivity)
         }
     }
 
@@ -28,38 +28,38 @@ abstract class BaseFragment : Fragment(), ICancel {
     }
 
     protected fun pushFragment(frag: Fragment, replace: Boolean, addToBackStack: Boolean, tag: String) {
-        (activity as? BaseActivity)?.pushFragment(frag, replace, addToBackStack, tag)
+        (activity as? KmmBaseActivity)?.pushFragment(frag, replace, addToBackStack, tag)
     }
 
     protected fun pushFragmentSynchronous(frag: Fragment, replace: Boolean, tag: String) {
-        (activity as? BaseActivity)?.pushFragmentSynchronous(frag, replace, tag)
+        (activity as? KmmBaseActivity)?.pushFragmentSynchronous(frag, replace, tag)
     }
 
     protected fun handleError(e: Exception) {
-        (activity as? BaseActivity)?.handleError(e)
+        (activity as? KmmBaseActivity)?.handleError(e)
     }
 
     protected fun showAlert(title: String, message: String) {
-        (activity as? BaseActivity)?.showAlert(title, message)
+        (activity as? KmmBaseActivity)?.showAlert(title, message)
     }
 
     protected fun showAlert(title: String, message: String, positiveListener: DialogInterface.OnClickListener) {
-        (activity as? BaseActivity)?.showAlert(title, message, positiveListener)
+        (activity as? KmmBaseActivity)?.showAlert(title, message, positiveListener)
     }
 
     protected fun showAlert(title: String,
                             message: String,
                             positiveText: String,
                             positiveListener: DialogInterface.OnClickListener?) {
-        (activity as? BaseActivity)?.showAlert(title, message, positiveText, positiveListener)
+        (activity as? KmmBaseActivity)?.showAlert(title, message, positiveText, positiveListener)
     }
 
     protected fun showCancelableAlert(title: String, message: String, positiveListener: DialogInterface.OnClickListener) {
-        (activity as? BaseActivity)?.showCancelableAlert(title, message, positiveListener)
+        (activity as? KmmBaseActivity)?.showCancelableAlert(title, message, positiveListener)
     }
 
     protected fun showCancelableAlert(title: String, message: String, positiveText: String, positiveListener: DialogInterface.OnClickListener) {
-        (activity as? BaseActivity)?.showCancelableAlert(title, message, positiveText, positiveListener)
+        (activity as? KmmBaseActivity)?.showCancelableAlert(title, message, positiveText, positiveListener)
     }
 
     protected fun showCancelableAlert(title: String,
@@ -68,7 +68,7 @@ abstract class BaseFragment : Fragment(), ICancel {
                             positiveListener: DialogInterface.OnClickListener?,
                             cancelText: String,
                             cancelListener: DialogInterface.OnClickListener?) {
-        (activity as? BaseActivity)?.showCancelableAlert(title, message, positiveText, positiveListener, cancelText, cancelListener)
+        (activity as? KmmBaseActivity)?.showCancelableAlert(title, message, positiveText, positiveListener, cancelText, cancelListener)
     }
 
     protected fun getProgress(): Progress {

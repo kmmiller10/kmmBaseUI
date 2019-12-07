@@ -15,7 +15,7 @@ import me.kmmiller.baseui.navigation.BottomNavRecyclerView
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 
 
-abstract class BaseActivity : AppCompatActivity(), BottomNavAdapter.BottomNavAdapterListener {
+abstract class KmmBaseActivity : AppCompatActivity(), BottomNavAdapter.BottomNavAdapterListener {
     private lateinit var bottomNavRecyclerView: BottomNavRecyclerView
     abstract var hasBottomNav: Boolean
     private var currentNavId = 0
@@ -192,7 +192,7 @@ abstract class BaseActivity : AppCompatActivity(), BottomNavAdapter.BottomNavAda
 
         // Deliver results to fragments in case anything needs to be handled by the frag
         supportFragmentManager.fragments.forEach {
-            if(it is BaseFragment) {
+            if(it is KmmBaseFragment) {
                 it.onActivityResult(requestCode, resultCode, data)
             }
         }

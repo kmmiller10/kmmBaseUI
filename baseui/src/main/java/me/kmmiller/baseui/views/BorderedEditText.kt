@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
 import me.kmmiller.baseui.R
 
-class BaseEditText(context: Context, attrs: AttributeSet) : AppCompatEditText(context, attrs) {
+class BorderedEditText(context: Context, attrs: AttributeSet) : AppCompatEditText(context, attrs) {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : this(context, attrs) {
         init()

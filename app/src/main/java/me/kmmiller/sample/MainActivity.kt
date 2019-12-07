@@ -1,10 +1,10 @@
 package me.kmmiller.sample
 
 import androidx.core.content.ContextCompat
-import me.kmmiller.baseui.BaseActivity
+import me.kmmiller.baseui.KmmBaseActivity
 import me.kmmiller.baseui.navigation.BottomNavItemModel
 
-class MainActivity : BaseActivity() {
+class MainActivity : KmmBaseActivity() {
 
     override fun getHighlightColor(): Int = ContextCompat.getColor(this, R.color.colorPrimary)
     override var hasBottomNav: Boolean = true
