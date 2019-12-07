@@ -18,7 +18,7 @@ import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 abstract class KmmBaseActivity : AppCompatActivity(), BottomNavAdapter.BottomNavAdapterListener {
     private lateinit var bottomNavRecyclerView: BottomNavRecyclerView
     abstract var hasBottomNav: Boolean
-    private var currentNavId = 0
+    protected var currentNavId = 0
 
     private val navItems = ArrayList<BottomNavItemModel>()
     private var adapter: BottomNavAdapter? = null
@@ -138,12 +138,8 @@ abstract class KmmBaseActivity : AppCompatActivity(), BottomNavAdapter.BottomNav
         if(supportFragmentManager.backStackEntryCount > 0) supportFragmentManager.popBackStack()
     }
 
-    fun handleError(e: Exception) {
+    open fun handleError(e: Exception) {
         e.printStackTrace()
-
-        val title = getString(R.string.error)
-        val message = "TODO" //TODO
-        showAlert(title, message)
     }
 
     fun showAlert(title: String, message: String) {
